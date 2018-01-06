@@ -1,0 +1,22 @@
+package Star3;
+
+public class Protos extends Tribe {
+	
+	public Protos(int mineral, int gas, int life, String name) {
+		super(mineral,gas,life,name);
+	}
+
+	
+	public void attack() { // 부모클래스의 attack를 재정의 (오버라이딩)
+		System.out.println("나는 프로포트...");
+		System.out.println("전기로 쏜다... 찌리릭...");
+	}
+
+}
+
+     
+
+
+
+
+
