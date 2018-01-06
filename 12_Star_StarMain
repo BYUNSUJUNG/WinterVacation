@@ -1,0 +1,108 @@
+package Star;
+
+import java.util.*;
+
+public class StarMain {
+
+	public static void main(String[] args) {
+		Terran t  = new Terran();
+		Zerg z = new Zerg();
+		Protos p = new Protos();
+		
+		int tribeSelect;
+		int menuSelect=0;
+		int collectSelect;
+		
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("----게임시작----");
+		System.out.println("종족을 선택해주세요.\n 1.테란  2 프로토스  3.저그");
+		System.out.print("선택 : ");
+		tribeSelect=scan.nextInt();
+		
+		switch(tribeSelect) {
+			case 1 : System.out.println("\n테란을 선택하였습니다");
+							while(menuSelect!=4) {
+								t.menu();
+								menuSelect=scan.nextInt();
+								switch(menuSelect) {
+									case 1 : t.attack(); break;
+									case 2 : t.collectMenu();
+													 collectSelect=scan.nextInt();
+													 switch(collectSelect) {
+													 case 1 : System.out.println("\n미네랄 수집를 시작합니다");
+													 		  t.makeMineral(); break;
+													 case 2 : System.out.println("\n가스 수집을 시작합니다");
+											 		 		  t.makeGas(); break;
+											 	
+													 }
+													 break;
+											 
+									case 3 : t.buildingWork();	break;	
+								}
+								System.out.println("");
+								t.printStatus();
+							}
+							
+							break;
+					 
+			case 2 : System.out.println("\n프로토스를 선택하였습니다");
+							while(menuSelect!=4) {
+								p.menu();
+								menuSelect=scan.nextInt();
+								switch(menuSelect) {
+									case 1 : p.attack(); break;
+									case 2 : p.collectMenu();
+											 collectSelect=scan.nextInt();
+											 switch(collectSelect) {
+											 case 1 : System.out.println("\n미네랄 수집를 시작합니다");
+											 		  p.makeMineral(); break;
+											 case 2 : System.out.println("\n가스 수집을 시작합니다");
+									 		 		  p.makeGas(); break;
+									 	
+											 } break; 
+											 
+									case 3 : p.buildingWork();	break;	
+								}
+								System.out.println("");
+								p.printStatus();
+							}
+							
+							break;
+
+					 
+			case 3 : System.out.println("\n저그를  선택하였습니다");
+							while(menuSelect!=4) {
+								z.menu();
+								menuSelect=scan.nextInt();
+								switch(menuSelect) {
+									case 1 : z.attack(); break;
+									case 2 : z.collectMenu();
+											collectSelect=scan.nextInt();
+											 switch(collectSelect) {
+											 case 1 : System.out.println("\n미네랄 수집를 시작합니다");
+											 		  z.makeMineral(); break;
+											 case 2 : System.out.println("\n가스 수집을 시작합니다");
+									 		 		  z.makeGas(); break;
+									 	
+											 }
+											 break;
+											 
+									case 3 : z.buildingWork();	break;									
+								}
+								System.out.println("");
+								z.printStatus();
+							}
+							
+							break;
+							 
+	  } // end of switch
+		
+	  
+	}
+
+}
+
+
+
