@@ -1,0 +1,34 @@
+package p261;
+
+public class Rectangle {
+	private int x,y;
+	private int width, height;
+	
+	public String toString() {
+		String str;
+		
+		str = "X="+this.x;
+		str += ",Y="+this.y;
+		str += ",너비="+this.width;
+		str += ",높이="+this.height;
+		
+		return str;
+	} // 여기를 주석처리하면 주소값이 출력됨
+	
+	Rectangle() {
+		this(0,0,1,1);
+		
+	}
+	
+	Rectangle(int width, int height) {
+		this(0,0,width,height);
+		
+	}
+	
+	Rectangle(int x, int y, int width, int height) {
+		this.x=x;
+		this.y=y;
+		this.width=width;
+		this.height=height;
+	} 
+}
