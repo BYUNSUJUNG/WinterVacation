@@ -1,0 +1,48 @@
+package Star;
+
+public class SCV {
+	private int mineral=0;
+	private int gas=0;
+	private int life=0;
+	private String name="";
+	
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void increseMineral(int num) {
+		this.mineral += num;
+	}
+	
+	public void increseGas(int num) {
+		this.gas += num;
+	} 
+	
+	
+	public int getMineral() {
+		return mineral;
+	}
+	public void setMineral(int mineral) {
+		this.mineral = mineral;
+	}
+	public int getGas() {
+		return gas;
+	}
+	public void setGas(int gas) {
+		this.gas = gas;
+	}
+	public int getLife() {
+		return life;
+	}
+	public void setLife(int life) {
+		this.life = life;
+	}
+	
+	
+	
+}
