@@ -1,0 +1,23 @@
+package Star3;
+
+import java.util.*;
+
+import Star2.CommandCenter;
+
+public class StarMain {
+
+	public static void main(String[] args) {
+
+		Terran t = new Terran(10,20,50,"민서비");
+		Zerg z = new Zerg(20,40,100,"현비니");
+		Protos p = new Protos(50,30,30,"정후니");
+		
+		CommandCenter aa = new CommandCenter();
+		
+		aa.SelectMenu(t);
+		aa.SelectMenu(z);
+		aa.SelectMenu(p);
+			
+	}
+
+}
