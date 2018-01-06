@@ -1,0 +1,9 @@
+package MiniStar;
+
+public class Protos extends Tribe {
+	public void attack() {
+		System.out.println("\n프로토스 공격");
+	}
+	
+
+}
