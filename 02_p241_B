@@ -1,0 +1,27 @@
+package p241;
+
+import p240.A;
+
+public class B {
+		
+	public static void main(String arg[]) {
+		A obj = new A();
+		// obj.a=10;
+		// obj.b=20;
+		
+		obj.setA(10);
+		obj.setB(20);
+		obj.c=30;
+
+		
+		System.out.printf("a= %d, b= %d, c=%d", obj.getA(), obj.getB(), obj.c);
+		
+	}
+}
+
+     
+
+
+
+
+
