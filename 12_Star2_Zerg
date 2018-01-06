@@ -1,5 +1,5 @@
 
-package Star;
+package Star2;
 
 public class Zerg extends Tribe {
 	public void attack() {
