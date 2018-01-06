@@ -1,0 +1,23 @@
+package Star3;
+
+public class Terran extends Tribe {
+	
+	
+	public Terran(int mineral, int gas, int life, String name) {
+		super(mineral,gas,life,name);
+	}
+
+	public void attack() { // 부모클래스의 attack를 재정의 (오버라이딩)
+		System.out.println("나는 테란...");
+		System.out.println("총을 쏜다... 두두두두두");
+		
+	}
+
+}
+
+     
+
+
+
+
+
