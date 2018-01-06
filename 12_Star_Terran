@@ -1,0 +1,9 @@
+package Star;
+
+public class Terran extends Tribe {
+	public void attack() {
+		System.out.println("\n테란 공격");
+	}	
+
+	
+}
