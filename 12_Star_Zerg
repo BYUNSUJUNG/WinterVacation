@@ -1,0 +1,10 @@
+
+package Star;
+
+public class Zerg extends Tribe {
+	public void attack() {
+		System.out.println("\n저그 공격");
+	}
+	
+
+}
