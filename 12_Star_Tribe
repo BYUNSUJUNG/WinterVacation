@@ -1,0 +1,49 @@
+package Star;
+
+public class Tribe {
+	int mineral;
+	int gas;
+	int hp=100;
+	int worker;
+	int buildingWork;
+	int building;
+	
+	
+	public void menu() {
+		System.out.println("==================");
+		System.out.println("메뉴를 선택해주세요. \n1.공격 \n2.수집 \n3.건물짓기 \n4.종료");
+		System.out.print("선택: ");
+	}
+	
+	public void collectMenu() {
+		System.out.println("\n수집 메뉴를 선택해주세요. \n1.미네랄 \n2.가스");
+		System.out.print("선택: ");
+	}
+	
+	
+	public void buildingWork() {
+		buildingWork+=20;
+		if(buildingWork==100) {
+			buildingWork=0;
+			building++;
+		}
+	}
+	
+	public void makeGas() {
+		gas += 10;
+	}
+	
+	public void makeMineral() {
+		mineral += 10;
+	}
+	
+	
+	public void printStatus() {
+		System.out.println("HP: "+hp);
+		System.out.println("가스: "+gas);
+		System.out.println("미네랄: "+mineral);
+		System.out.println("건물: "+building+"(완성: "+buildingWork+"%) \n");
+		
+	}
+	
+}
