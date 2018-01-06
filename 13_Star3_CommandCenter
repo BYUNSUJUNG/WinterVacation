@@ -1,0 +1,44 @@
+package Star2;
+
+import java.util.*;
+
+public class CommandCenter {
+
+			private void printMenu() {
+				System.out.println("\n ===========");
+				System.out.println("1. 미네랄 채굴");
+				System.out.println("2. 가스 채굴");
+				System.out.println("3. 공격");
+				System.out.println("0. 종료");
+				System.out.println("===========");
+				
+			}
+			
+			public void SelectedMenu(Tribe worker) {
+				Scanner scan = new Scanner(System.in);
+				int choiceNumber;
+				while(true) {
+					printMenu();
+					System.out.print("선택 : ");
+					choiceNumber=scan.nextInt();
+					
+					if(choiceNumber<=0) {
+						System.out.print("종료합니다");
+						break;
+					}
+					
+					switch(choiceNumber) {
+					case 1 : worker.increaseMineral();
+							 System.out.println(worker);
+							 break;
+					case 2 : worker.increaseGas();
+							 System.out.println(worker);
+							 break;
+					default :worker.attack(); // 오버라이딩을 통한 다양성
+							 break;
+					} // end of switch
+					
+				} // end of while
+			} // end of method
+
+	}
