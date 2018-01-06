@@ -2,7 +2,7 @@ package Star3;
 
 import java.util.*;
 
-import Star2.CommandCenter;
+import Star3.CommandCenter;
 
 public class StarMain {
 
