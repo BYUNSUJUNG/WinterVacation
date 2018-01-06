@@ -1,4 +1,4 @@
-package Star2;
+package Star;
 
 public class Tribe {
 	private int mineral;
