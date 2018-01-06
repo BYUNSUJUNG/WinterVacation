@@ -1,4 +1,4 @@
-package MiniStar;
+package Star;
 
 public class Protos extends Tribe {
 	public void attack() {
