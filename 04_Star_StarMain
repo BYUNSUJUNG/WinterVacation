@@ -1,0 +1,21 @@
+package Star;
+
+public class StarMain {
+	public static void main(String[] args) {
+		SCV myscv01 = new SCV();
+		SCV myscv02 = new SCV();
+		SCV yourscv = new SCV();
+		CommandCenter cc = new CommandCenter();
+		
+		cc.MakeSCVName(myscv01, "프로브");
+		cc.SelectedMenu(myscv01);
+		
+		cc.MakeSCVName(yourscv, "드론");
+		cc.SelectedMenu(yourscv);
+		
+		cc.MakeSCVName(myscv02, "너꾸리");
+		cc.SelectedMenu(myscv02);
+		
+			
+	}
+}
