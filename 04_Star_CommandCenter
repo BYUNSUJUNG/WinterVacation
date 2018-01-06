@@ -1,0 +1,48 @@
+package Star;
+
+import java.util.*;
+
+public class CommandCenter {
+	private void printMenu() {
+		System.out.println("\n ===========");
+		System.out.println("1. SCV 미네랄 채굴");
+		System.out.println("2. SCV 가스 채굴");
+		System.out.println("0. 종료");
+		System.out.println("===========");
+		
+	}
+	
+	
+	public void MakeSCVName(SCV worker, String name) {
+		worker.setName(name);
+	}
+	
+	
+	public void SelectedMenu(SCV worker) {
+		Scanner scan = new Scanner(System.in);
+		int choiceNumber;
+		while(true) {
+			printMenu();
+			System.out.print("선택 : ");
+			choiceNumber=scan.nextInt();
+			
+			if(choiceNumber<=0) {
+				System.out.print("종료합니다");
+				break;
+			}
+			
+			switch(choiceNumber) {
+			case 1 : worker.increseMineral(8);
+					 System.out.println(worker.getName());
+					 System.out.println("미네랄 수치 : "+worker.getMineral());
+					 break;
+			case 2 : worker.increseGas(8);
+					 System.out.println(worker.getName());
+					 System.out.println("가스 수치 : "+worker.getGas());
+					 break;
+			default : break;
+			}
+			
+		} // end of while
+	}
+}
