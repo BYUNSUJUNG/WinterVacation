@@ -1,0 +1,52 @@
+package Star2;
+
+public class Tribe {
+	private int mineral;
+	private int gas;
+	private int life;
+	private String name;
+	private int id;
+	private static int count=0;
+	
+	public Tribe() {
+		this(50,30,100," ");
+	}
+
+	public Tribe(int mineral, int gas, int life) {
+		this(mineral, gas, life, "무명씨");
+		
+	}
+	
+	public Tribe(int mineral, int gas, int life, String name) {
+		this.id= ++count;
+		this.mineral=mineral;
+		this.gas=gas;
+		this.life=life;
+		
+	}
+	
+	public String toString() {
+		String str;
+		str = "객체이름: "+name;
+		str += "\n 객체ID : "+this.id;
+		str += "\n 미네랄 수치 : "+this.mineral;
+		str += "\n 가스 수치 : "+this.gas;
+		str += "\n 생명 수치: "+this.life;
+		
+		return str;
+		
+	}
+	
+	public void increaseMineral() {
+		this.mineral += 8;
+		
+	}
+	
+	public void increaseGas() {
+		this.gas += 40;
+	}
+	
+	public void attack() {
+		// 자식 클래스에서 다시 설정
+	}
+}
