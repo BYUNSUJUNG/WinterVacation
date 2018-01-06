@@ -1,0 +1,15 @@
+package Star3;
+
+public class Zerg extends Tribe {
+	
+	public Zerg(int mineral, int gas, int life, String name) {
+		super(mineral,gas,life,name);
+	}
+
+	
+	public void attack() { // 부모클래스의 attack를 재정의 (오버라이딩)
+		System.out.println("나는 저그...");
+		System.out.println("침을 뱉는다...퉤퉤퉤");
+	}
+
+}
