@@ -1,0 +1,21 @@
+public class ShapeTest {
+	public static void main(String arg[]) {
+		Shape s = new Rectangle();
+		Rectangle r = new Rectangle();
+			
+		s.x=10;
+		s.y=0;
+		
+		((Rectangle)s).width=100;
+		// (Rectangle)s.width=100;  // '.' 의 우선순위가 높음(다른결과)
+		((Rectangle)s).height=200;
+		
+		r.x=10;
+		r.y=0;
+		
+		r.width=100;
+		r.height=200;
+	} 
+
+	
+}
