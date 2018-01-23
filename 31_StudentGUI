@@ -1,0 +1,64 @@
+package StudentGUI;
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+import javax.swing.event.*;
+
+public class StudentGUI extends JFrame  implements ActionListener   { 
+		
+	JLabel studNumberLabel;
+	JLabel studNameLabel;
+	JLabel pointLabel;
+	
+	JButton studyButton;
+	JButton playButton;
+	
+	JPanel panel;
+	
+	Student std;
+	
+	public StudentGUI(Student std) {
+		this.std=std;
+		studNumberLabel = new JLabel(Integer.toString(std.getStudNumber()));
+		// std.getStudNumber() 는 int 타입 / Label는 String 타입
+		studNameLabel = new JLabel(std.getStudName());
+		pointLabel = new JLabel(Integer.toString(std.getPoint()));
+		
+		studyButton = new JButton("공부하기");
+		playButton = new JButton("놀기");
+		
+		studyButton.addActionListener(this);
+		playButton.addActionListener(this);
+		
+		panel = new JPanel();
+		
+		panel.add(studNumberLabel);
+		panel.add(studNameLabel);
+		panel.add(pointLabel);
+		panel.add(studyButton);
+		panel.add(playButton);
+		
+		this.add(panel);
+		this.setBounds(100,50,400,200);
+		this.setTitle("학생관리시스템 v0.1");
+		
+		this.setVisible(true);
+		
+		
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource() == playButton) {
+			std.decresePoint();
+			pointLabel.setText(Integer.toString(std.getPoint()));
+			
+		} else if (e.getSource() == playButton) {
+			std.incresePoint();
+			pointLabel.setText(Integer.toString(std.getPoint()));
+			
+		}
+	}
+	
+}
