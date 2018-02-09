@@ -1,0 +1,7 @@
+public class StaticMethodTest {
+
+	public static void main(String[] args) {
+		MyInterface.print("java 8");
+	}
+
+}
