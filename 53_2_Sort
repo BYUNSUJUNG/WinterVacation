@@ -1,0 +1,15 @@
+package p694;
+
+import java.util.*;
+
+public class Sort {
+
+	public static void main(String[] args) {
+		Integer [] sample = {1,5,2,4,3};
+		List<Integer> list = Arrays.asList(sample);
+		Collections.sort(list);
+		System.out.println(list);
+
+	}
+
+}
